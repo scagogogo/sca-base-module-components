@@ -4,7 +4,7 @@ package models
 type Project[ProjectEcosystem, ModuleEcosystem, ComponentEcosystem, ComponentDependencyEcosystem any] struct {
 
 	// 项目本身也可以认为是一个组件的扩展
-	*Component[ComponentEcosystem]
+	Component[ComponentEcosystem]
 
 	// 此项目都包含哪些模块，不支持模块系统的项目数组长度就恒为1
 	Modules map[string]*Module[ModuleEcosystem, ComponentEcosystem, ComponentDependencyEcosystem]

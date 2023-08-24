@@ -4,7 +4,7 @@ package models
 type Module[ModuleEcosystem, ComponentEcosystem, ComponentDependencyEcosystem any] struct {
 
 	// 模块可以认为是一堆组件的集合，它的本质其实就是一个组件，在这个组件的基础上添加了一些属性就成了模块
-	*Component[ComponentEcosystem]
+	Component[ComponentEcosystem]
 
 	// 父模块
 	ParentModule *Module[ModuleEcosystem, ComponentEcosystem, ComponentDependencyEcosystem]
