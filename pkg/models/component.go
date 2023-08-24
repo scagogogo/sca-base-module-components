@@ -29,6 +29,11 @@ type Component[ComponentEcosystem any] struct {
 	ChangeTime *time.Time `mapstructure:"change_time" json:"change_time,omitempty" yaml:"change_time" db:"change_time" gorm:"column:change_time"`
 }
 
+func NewComponent[ComponentEcosystem any]() *Component[ComponentEcosystem] {
+	return &Component[ComponentEcosystem]{}
+}
+
 func (x *Component[ComponentEcosystem]) TableName() string {
 	return "components"
 }
+

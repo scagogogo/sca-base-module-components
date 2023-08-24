@@ -18,3 +18,7 @@ type Module[ModuleEcosystem, ComponentEcosystem, ComponentDependencyEcosystem an
 	// 不同的包管理器可以有自己独有的模块级别的特性，这里允许自行扩展
 	ModuleEcosystem ModuleEcosystem
 }
+
+func (x *Module[ModuleEcosystem, ComponentEcosystem, ComponentDependencyEcosystem]) TableName() string {
+	return "modules"
+}
